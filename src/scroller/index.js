@@ -21,7 +21,7 @@ export default class extends VirtualScroll {
     [this.child] = ele.children
     this.el = ele
     this.on((e) => {
-      this.scrollY += e.deltaY
+      this.scrollY -= e.originalEvent.deltaY
       this.scrollY = Math.max((this.child.scrollHeight - window.innerHeight) * -1, this.scrollY)
       this.scrollY = Math.min(0, this.scrollY)
       this.listener(-this.scrollY || 0, this.child.scrollHeight - window.innerHeight)

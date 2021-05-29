@@ -43,19 +43,19 @@ class Issue {
       return frag.dom[0]
     }
 
-    const { mirror } = this
-    const div = creator('div', { className: 'open-comments' })
-    const button = creator('button', {
-      className: 'button',
-      onclick() {
-        mirror.openComments(number.toString(), this)
-      },
-      innerHTML: `View Comments (${totalCount})`,
-    })
+    // const { mirror } = this
+    // const div = creator('div', { className: 'open-comments' })
+    // const button = creator('button', {
+    //   className: 'button',
+    //   onclick() {
+    //     mirror.openComments(number.toString(), this)
+    //   },
+    //   innerHTML: `View Comments (${totalCount})`,
+    // })
 
-    div.appendChild(button)
-    div.appendChild(footer)
-    frag.append(div)
+    // div.appendChild(button)
+    // div.appendChild(footer)
+    // frag.append(div)
 
     return frag.dom[0]
   }

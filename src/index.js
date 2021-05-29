@@ -110,6 +110,10 @@ mirror.getPost = async function getPost(number) {
 
   switchToPost()
   scroller.start(document.querySelector('.single'))
+
+  // 同时初始化 comment
+  $('#comments').html('')
+  await this.getComments(number)
 }
 
 mirror.openComments = async function openComments(params, ele) {
